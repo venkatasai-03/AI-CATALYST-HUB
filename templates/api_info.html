@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Info - {{ model.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #28a745;
+        }
+        h3 {
+            margin-top: 30px;
+        }
+        p, code {
+            font-size: 16px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .api-key {
+            background-color: #eaf4ff;
+            padding: 10px;
+            border: 1px dashed #007bff;
+            border-radius: 6px;
+            font-family: monospace;
+            color: #007bff;
+            word-break: break-all;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Subscription Successful!</h2>
+        <p>You are now subscribed to: <strong>{{ model.name }}</strong></p>
+
+        <h3>🔑 Dummy API Key</h3>
+        <div class="api-key">12345-abcde-67890-fake-key</div>
+
+        <h3>🌐 Dummy Endpoint</h3>
+        <div class="api-key">https://api.yoursite.com/v1/{{ model.id }}</div>
+
+        <h3>📦 Example Usage</h3>
+        <pre><code>POST https://api.yoursite.com/v1/{{ model.id }}
+Headers:
+    Authorization: Bearer 12345-abcde-67890-fake-key
+    Content-Type: application/json
+
+Body:
+{
+    "input1": "value1",
+    "input2": "value2"
+}
+</code></pre>
+
+        <h3>🧾 Dummy Response:</h3>
+        <pre>{{ dummy_response | tojson(indent=2) }}</pre>
+
+        <a href="{{ url_for('model', model_id=model.id) }}">Back to Model Page</a>
+    </div>
+</body>
+</html>

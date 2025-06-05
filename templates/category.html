@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category_name.title() }} Models{% endblock %}
+
+{% block content %}
+<style>
+    /* CSS for catogery.html */
+    .card:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .card-text {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 1rem;
+    }
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+    .btn-info:hover {
+        background-color: #138496;
+        border-color: #138496;
+    }
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+    .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #212529;
+    }
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+</style>
+<div class="container my-5">
+    <h2 class="mb-4">{{ category_name.title() }} Models</h2>
+    <div class="row">
+        {% for model in models %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100 model-card">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ model['name'] }}</h5>
+
+                    <div class="d-grid gap-2 mt-auto">
+                        <a href="{{ url_for('model', model_id=model['id']) }}" class="btn btn-info">Know About Me</a>
+                        <a href="{{ url_for('run_model', model_id=model['id']) }}" class="btn btn-success">Run Model</a>
+
+                        {% if model.subscribed %}
+                        <button class="btn btn-secondary" disabled>Subscribed</button>
+                        {% else %}
+                        <form action="{{ url_for('subscribe', model_id=model['id']) }}" method="POST">
+                            <button type="submit" class="btn btn-warning">Subscribe ($10/month)</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mt-4">Back to Dashboard</a>
+</div>
+{% endblock %}

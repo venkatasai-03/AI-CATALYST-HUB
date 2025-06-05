@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<style>
+    /* Full-page gradient background */
+    body {
+        background: linear-gradient(135deg, #e0f7fa, #e3f2fd, #f1f8e9);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    /* Container styling for better contrast */
+    .dashboard-container {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    /* Card hover effect */
+    .card:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #007bff;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+    }
+</style>
+
+<div class="container my-5 dashboard-container">
+    <h2 class="mb-4">Model Categories</h2>
+    <div class="row">
+        {% for category in categories %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 h-100 model-card">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-capitalize">{{ category['category'] }}</h5>
+                    <p class="card-text">Explore AI models in the {{ category['category'] }} domain.</p>
+                    <a href="{{ url_for('category', category_name=category['category']) }}"
+                       class="btn btn-outline-primary mt-auto w-100">
+                        View Models
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

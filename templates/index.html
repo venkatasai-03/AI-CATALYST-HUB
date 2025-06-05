@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    /* CSS for index.html */
+    .jumbotron {
+        background-color: #e9ecef;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+    .lead {
+        font-size: 1.1rem;
+        color: #6c757d;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+    .company-info {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 2rem;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .company-info h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .company-info p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #555;
+    }
+</style>
+
+<div class="jumbotron bg-light p-5 rounded-lg m-3 text-center">
+    <h1 class="display-4">Welcome to AI Catalyst Hub</h1>
+    <p class="lead">Empowering Your Businesses with AI</p>
+    <hr class="my-4">
+    <p>Get started by creating an account or logging in to explore our models</p>
+    <div class="d-flex justify-content-center gap-3">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+        <a class="btn btn-secondary btn-lg" href="{{ url_for('signup') }}" role="button">Sign Up</a>
+    </div>
+</div>
+
+<div class="company-info text-center">
+    <h2>About AI Catalyst Hub</h2>
+    <p>
+        AI Catalyst Hub is your gateway to intelligent automation. We specialize in delivering cutting-edge machine learning solutions tailored to critical sectors including healthcare, agriculture, pollution control, and business analytics.
+        Our platform brings you a curated collection of ready-to-use AI models designed to drive innovation, optimize operations, and solve real-world problems with data-driven insights.
+    </p>
+    <p>
+        Whether you're a startup looking to enhance your product with predictive intelligence or an enterprise seeking operational efficiency, our tools and subscription-based access make advanced AI more accessible than ever.
+        Join us to harness the full potential of artificial intelligence — with simplicity, reliability, and speed.
+    </p>
+</div>
+{% endblock %}
