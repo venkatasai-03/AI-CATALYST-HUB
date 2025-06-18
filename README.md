@@ -99,38 +99,58 @@ These models are optimized, scalable, and can be accessed through an interactive
 git clone https://github.com/venkatasai-03/AI-CATALYST-HUB.git
 cd AI-CATALYST-HUB```
 
-###Install dependencies
+### Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-###Run Flask API
+### Run Flask API
 
+```bash
 python app.py
+```
 
+### Docker (Optional)
 
-📊 Results
-Domain	Accuracy Range	Notes
-Healthcare	89–94%	Highly interpretable, clinical support
-Agriculture	86–98%	Enables precision farming
-Business	~91%	Improves customer analytics
-Pollution	88–96%	Supports early warning systems
+```bash
+docker build -t ai-catalyst-hub .
+docker run -p 5000:5000 ai-catalyst-hub
+```
 
-🚧 Future Scope
-Add domains like Education, Finance, and Manufacturing
+---
 
-Integrate Explainable AI (SHAP, LIME)
+## 🌐 Demo
 
-Build real-time dashboards
+👉 [Live Demo (Render)](https://ai-catalyst-hub.onrender.com/)
 
-Introduce AutoML for dynamic model selection
+---
 
-Enable real-time alerts and APIs for public use
+## 📊 Results
 
-👥 Contributors
-YVK Chaitanya
+| Domain       | Accuracy Range | Notes                                     |
+|--------------|----------------|-------------------------------------------|
+| Healthcare   | 89–94%         | Highly interpretable, clinical support    |
+| Agriculture  | 86–98%         | Enables precision farming                 |
+| Business     | ~91%           | Improves customer analytics               |
+| Pollution    | 88–96%         | Supports early warning systems            |
 
-M Venkata Sai
+---
 
-D Tirumalesh
+## 🚧 Future Scope
 
-Project guided by Dr. Aravapalli Rama Satish, VIT-AP University
+- Add domains like Education, Finance, and Manufacturing
+- Integrate Explainable AI (SHAP, LIME)
+- Build real-time dashboards
+- Introduce AutoML for dynamic model selection
+- Enable real-time alerts and APIs for public use
+
+---
+
+## 👥 Contributors
+
+- [M Venkata Sai](https://github.com/venkatasai-03)
+- [YVK Chaitanya]
+- [D Tirumalesh]
+
+> Project guided by **Dr. Aravapalli Rama Satish**, VIT-AP University
