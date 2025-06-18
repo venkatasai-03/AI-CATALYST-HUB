@@ -77,7 +77,8 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 - **Languages:** Python
 - **Frameworks:** TensorFlow, PyTorch, Scikit-learn, XGBoost, Flask
-- **Deployment:** Docker, FastAPI
+- **Database:** SQLALCHMEY
+- **Deployment:** Render, Docker(optional)
 - **Frontend:** HTML/CSS (basic)
 - **NLP:** Transformers (Hugging Face - DistilBERT)
 - **Data Handling:** Pandas, NumPy
