@@ -30,7 +30,7 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - 🔌 Pre-trained, customizable ML/DL models
 - 🧠 Support for structured (tabular), unstructured (image, text) data
@@ -41,7 +41,7 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 ---
 
-## 🏥🌱📊🌫️ Domains & Models
+## Domains & Models
 
 ### 🔬 Healthcare
 | Task | Model | Accuracy |
@@ -73,7 +73,7 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Languages:** Python
 - **Frameworks:** TensorFlow, PyTorch, Scikit-learn, XGBoost, Flask
@@ -85,7 +85,7 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -120,13 +120,13 @@ docker run -p 5000:5000 ai-catalyst-hub
 
 ---
 
-## 🌐 Demo
+##  Demo
 
 👉 [Live Demo (Render)](https://ai-catalyst-hub.onrender.com/)
 
 ---
 
-## 📊 Results
+##  Results
 
 | Domain       | Accuracy Range | Notes                                     |
 |--------------|----------------|-------------------------------------------|
@@ -137,7 +137,7 @@ docker run -p 5000:5000 ai-catalyst-hub
 
 ---
 
-## 🚧 Future Scope
+##  Future Scope
 
 - Add domains like Education, Finance, and Manufacturing
 - Integrate Explainable AI (SHAP, LIME)
@@ -147,7 +147,7 @@ docker run -p 5000:5000 ai-catalyst-hub
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 - [M Venkata Sai](https://github.com/venkatasai-03)
 - [YVK Chaitanya]
