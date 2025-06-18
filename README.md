@@ -97,4 +97,40 @@ These models are optimized, scalable, and can be accessed through an interactive
 
 ```bash
 git clone https://github.com/venkatasai-03/AI-CATALYST-HUB.git
-cd AI-CATALYST-HUB
+cd AI-CATALYST-HUB```
+
+###Install dependencies
+
+pip install -r requirements.txt
+
+###Run Flask API
+
+python app.py
+
+
+📊 Results
+Domain	Accuracy Range	Notes
+Healthcare	89–94%	Highly interpretable, clinical support
+Agriculture	86–98%	Enables precision farming
+Business	~91%	Improves customer analytics
+Pollution	88–96%	Supports early warning systems
+
+🚧 Future Scope
+Add domains like Education, Finance, and Manufacturing
+
+Integrate Explainable AI (SHAP, LIME)
+
+Build real-time dashboards
+
+Introduce AutoML for dynamic model selection
+
+Enable real-time alerts and APIs for public use
+
+👥 Contributors
+YVK Chaitanya
+
+M Venkata Sai
+
+D Tirumalesh
+
+Project guided by Dr. Aravapalli Rama Satish, VIT-AP University
