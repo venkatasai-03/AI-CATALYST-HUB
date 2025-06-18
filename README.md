@@ -17,7 +17,7 @@ A scalable B2B AI platform delivering plug-and-play machine learning solutions a
 
 ---
 
-## 🌐 Overview
+## Overview
 
 **AI Catalyst Hub** was built to bridge the AI accessibility gap for organizations that cannot afford expensive AI development. It simplifies AI adoption through a collection of pre-trained models across key domains:
 
